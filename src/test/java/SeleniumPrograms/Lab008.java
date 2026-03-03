@@ -1,13 +1,17 @@
 package SeleniumPrograms;
-
+import io.qameta.allure.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 
 public class Lab008 {
+    @Owner("dvidya1")
+    @Severity(SeverityLevel.BLOCKER)
+    @Description("Verify that the error message comes with invalid email on signup page.")
     @Test
     public void test_lab008() {
         WebDriver driver = new ChromeDriver();
