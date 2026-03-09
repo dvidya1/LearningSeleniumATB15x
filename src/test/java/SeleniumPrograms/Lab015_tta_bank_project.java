@@ -23,7 +23,8 @@ public class Lab015_tta_bank_project{
         signup_create.click();
         Thread.sleep(5000);
         WebElement total_balance_before = driver.findElement(By.xpath("//p[@class='text-blue-100 text-sm font-medium']"));
-        System.out.println("total_balance_before is " + total_balance_before.getText());
+        WebElement total_balance_before_value = driver.findElement(By.xpath("//h3[@class='mt-2 text-3xl font-bold']"));
+        System.out.println("total_balance_before is " + total_balance_before.getText() + total_balance_before_value.getText());
         Thread.sleep(5000);
         WebElement transfer_funds = driver.findElement(By.xpath("//button[normalize-space()='Transfer Funds']"));
         transfer_funds.click();
@@ -41,7 +42,9 @@ public class Lab015_tta_bank_project{
         dashboard.click();
         Thread.sleep(7000);
         WebElement total_balance_after = driver.findElement(By.xpath("//p[@class='text-blue-100 text-sm font-medium']"));
-        System.out.println("total_balance_after is " + total_balance_after.getText());
+        WebElement total_balance_after_value = driver.findElement(By.xpath("//h3[@class='mt-2 text-3xl font-bold']"));
+        System.out.println("total_balance_after is " + total_balance_after.getText() + total_balance_after_value.getText());
+
 
 
 
