@@ -15,7 +15,7 @@ public class Lab017_conditional_methods {
         boolean logo_status = driver.findElement(By.xpath("//img[@alt='nopCommerce demo store']")).isDisplayed();
         System.out.println("status of logo is " + logo_status);
 
-        //isdisplayed() //we can check enable/disable status of operational element
+        //isenabled() //we can check enable/disable status of operational element
         boolean register_button_check = driver.findElement(By.xpath("//button[@type='submit']")).isEnabled();
         System.out.println("register_button status " + register_button_check);
 
