@@ -21,15 +21,17 @@ public class Lab022_alert {
         driver.findElement(By.xpath("//button[normalize-space()='Click for JS Alert']")).click();
         Thread.sleep(3000);
         //accept alert //1st approach
-       driver.switchTo().alert().accept();
+      // driver.switchTo().alert().accept();
 //OR
        //accept alert and print the text //2nd approach
         Alert jsalert = driver.switchTo().alert();
         System.out.println(jsalert.getText());
         jsalert.accept();
+        String jsalert_result=driver.findElement(By.id("result")).getText();
+        Assert.assertEquals(jsalert_result,"You successfully clicked an alert");
 
 
-       //Confirm ALert //having ok and cancel in alert //1st approach
+     /*  //Confirm ALert //having ok and cancel in alert //1st approach
         driver.findElement(By.xpath("//button[normalize-space()='Click for JS Confirm']")).click();
         Thread.sleep(3000);
        driver.switchTo().alert().dismiss();
@@ -46,7 +48,7 @@ public class Lab022_alert {
        jsprompt.accept();
         //OR
         jsprompt.sendKeys("prompt cancel");
-        jsprompt.dismiss();
+        jsprompt.dismiss(); */
 
     }
 }
