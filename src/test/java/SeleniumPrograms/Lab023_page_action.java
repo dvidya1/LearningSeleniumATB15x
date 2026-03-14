@@ -5,10 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-import javax.swing.*;
-import java.time.Duration;
-
-public class Lab023_page {
+public class Lab023_page_action {
     public static void main(String[] args) {
         WebDriver driver = new ChromeDriver();
         driver.navigate().to("https://thetestingacademy.com/");
